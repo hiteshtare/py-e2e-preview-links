@@ -85,7 +85,7 @@ describe("Flipbooks / Digital Samplers", () => {
     });
   });
 
-  describe.only("yogoda-satsanga-magazine", () => {
+  describe("yogoda-satsanga-magazine", () => {
     beforeEach(() => {
       cy.visit("spiritual/yogoda-satsanga-magazine");
     });
