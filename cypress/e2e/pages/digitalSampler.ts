@@ -40,7 +40,7 @@ export class DigitalSamplerPages {
   open3DIssueAndTakeScreenshot(link: JQuery<Element>) {
     // cy.visit(link.prop("href")).wait(3000).screenshot(`3DIssue: ${Cypress.currentTest.title}`,{ overwrite: true });
 
-    cy.visit(link.prop("href")).wait(3000).screenshot();
+    cy.visit(link.prop("href")).get('.a44').wait(1000).screenshot();
   }
 
   clickHindiPage() {

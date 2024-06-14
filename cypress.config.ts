@@ -3,7 +3,7 @@ import allureWriter from '@shelex/cypress-allure-plugin/writer';
 
 export default defineConfig({
   e2e: {
-    watchForFileChanges: true,
+    watchForFileChanges: false,
     defaultCommandTimeout: 10000,
     video: true,
     baseUrl: 'https://test.yssofindia.org/',
