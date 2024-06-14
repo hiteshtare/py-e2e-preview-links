@@ -3,9 +3,7 @@ import { DigitalSamplerPages } from "./pages/digitalSampler";
 const digitalSamplerPages = new DigitalSamplerPages();
 
 describe("Flipbooks / Digital Samplers", () => {
-  //test.yssofindia.org/yss-lessons
-
-  https: describe("yss-lessons", () => {
+  describe("yss-lessons", () => {
     beforeEach(() => {
       cy.visit("yss-lessons");
     });
