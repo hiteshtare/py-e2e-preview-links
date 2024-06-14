@@ -1,7 +1,7 @@
-export class DigitalSamplerPages {
-  oldLink = "https://yssofindia.org/digitalSamplers/";
-  newLink = "https://wsfb.yssofindia.org/digitalsamplers/";
+// Import custom config
+import { TEST_CONFIG } from "../config";
 
+export class DigitalSamplerPages {
   btn6SpirituallyRevolutionaryIdeas =
     ".elementor-element-ff6504f > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > :nth-child(3) > a";
   btnYSSLessons = ".elementor-button.elementor-button-link.elementor-size-sm";
@@ -34,7 +34,9 @@ export class DigitalSamplerPages {
   }
 
   checkHrefForNewLink(selector: string) {
-    cy.get(selector).should("have.attr", "href").and("include", this.newLink);
+    cy.get(selector)
+      .should("have.attr", "href")
+      .and("include", TEST_CONFIG.digitalSampler.link);
   }
 
   checkStatus200ForNewLink(selector: string) {
@@ -44,14 +46,19 @@ export class DigitalSamplerPages {
       cy.log("3DIssue link: ", link.prop("href"));
 
       //Open this new link and take screenshot
-      this.open3DIssueAndTakeScreenshot(link);
+      if (!TEST_CONFIG.digitalSampler.skipOpen3DIssueAndTakeScreenshot) {
+        this.open3DIssueAndTakeScreenshot(link);
+      }
     });
   }
 
   open3DIssueAndTakeScreenshot(link: JQuery<Element>) {
     // cy.visit(link.prop("href")).wait(3000).screenshot(`3DIssue: ${Cypress.currentTest.title}`,{ overwrite: true });
 
-    cy.visit(link.prop("href")).get(".a44").wait(2000).screenshot();
+    cy.visit(link.prop("href"))
+      .get(".a44")
+      .wait(TEST_CONFIG.digitalSampler.waitForScreenshot)
+      .screenshot();
   }
 
   clickOnSecondTab() {

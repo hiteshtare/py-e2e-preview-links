@@ -1,7 +1,7 @@
-export class ProductPreviewPages {
-  oldLink = "https://yssofindia.org/wp-content/uploads/preview/";
-  newLink = "https://wsfb.yssofindia.org/product-preview/";
+// Import custom config
+import { TEST_CONFIG } from "../config";
 
+export class ProductPreviewPages {
   //First Tab
   btnYSSMagazineTab1 =
     ".elementor-element-90984c6 > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-button-wrapper > .elementor-button";
@@ -19,7 +19,9 @@ export class ProductPreviewPages {
   }
 
   checkHrefForNewLink(selector: string) {
-    cy.get(selector).should("have.attr", "href").and("include", this.newLink);
+    cy.get(selector)
+      .should("have.attr", "href")
+      .and("include", TEST_CONFIG.productPreview.link);
   }
 
   checkStatus200ForNewLink(selector: string) {
@@ -29,13 +31,18 @@ export class ProductPreviewPages {
       cy.log("3DIssue link: ", link.prop("href"));
 
       //Open this new link and take screenshot
-      this.open3DIssueAndTakeScreenshot(link);
+      if (!TEST_CONFIG.productPreview.skipOpen3DIssueAndTakeScreenshot) {
+        this.open3DIssueAndTakeScreenshot(link);
+      }
     });
   }
 
   open3DIssueAndTakeScreenshot(link: JQuery<Element>) {
     // cy.visit(link.prop("href")).wait(3000).screenshot(`3DIssue: ${Cypress.currentTest.title}`,{ overwrite: true });
 
-    cy.visit(link.prop("href")).get(".a44").wait(2000).screenshot();
+    cy.visit(link.prop("href"))
+      .get(".a44")
+      .wait(TEST_CONFIG.productPreview.waitForScreenshot)
+      .screenshot();
   }
 }
