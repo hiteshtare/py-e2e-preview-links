@@ -28,7 +28,7 @@ export class ProductPreviewPages {
     cy.get(selector).then((link) => {
       cy.request("HEAD", link.prop("href")).its("status").should("eq", 200);
 
-      cy.log("3DIssue link: ", link.prop("href"));
+      cy.log(`3DIssue link: ${link.prop("href")}`);
 
       //Open this new link and take screenshot
       if (!TEST_CONFIG.productPreview.skipOpen3DIssueAndTakeScreenshot) {
