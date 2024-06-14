@@ -3,7 +3,7 @@ import { ProductPreviewPages } from "./pages/productPreview";
 const productPreviewPages = new ProductPreviewPages();
 
 describe("Magazines & Product Preview", () => {
-  https: describe("yogoda-satsanga-magazine", () => {
+  describe("yogoda-satsanga-magazine", () => {
     beforeEach(() => {
       cy.visit("spiritual/yogoda-satsanga-magazine");
     });
