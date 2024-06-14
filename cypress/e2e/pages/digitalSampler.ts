@@ -12,6 +12,9 @@ export class DigitalSamplerPages {
   buttonTelugu = ".wpml-ls-item-te";
 
   validateNewlinkAndStatusCode200(selector: string) {
+    // cy.screenshot(`Page: ${Cypress.currentTest.titlePath[0]} >> ${Cypress.currentTest.titlePath[1]}`,{ overwrite: true, capture:"viewport" });
+    cy.screenshot({capture:"viewport" });
+
     //Check if href contains new link
     this.checkHrefForNewLink(selector);
 
@@ -35,7 +38,9 @@ export class DigitalSamplerPages {
   }
 
   open3DIssueAndTakeScreenshot(link: JQuery<Element>) {
-    cy.visit(link.prop("href")).wait(3000).screenshot({ overwrite: true });
+    // cy.visit(link.prop("href")).wait(3000).screenshot(`3DIssue: ${Cypress.currentTest.title}`,{ overwrite: true });
+
+    cy.visit(link.prop("href")).wait(3000).screenshot();
   }
 
   clickHindiPage() {
