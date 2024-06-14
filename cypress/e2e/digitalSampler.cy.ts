@@ -1,4 +1,8 @@
+// Import pages
 import { DigitalSamplerPages } from "./pages/digitalSampler";
+
+// Import custom modules
+import { openHindiPage, openTamilPage, openTeluguPage } from "./util/common.util";
 
 const digitalSamplerPages = new DigitalSamplerPages();
 
@@ -16,7 +20,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("HINDI - should have new link and give 200 OK status", () => {
       //Navigate to Hindi Page
-      digitalSamplerPages.clickHindiPage();
+      openHindiPage();
 
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnYSSLessons
@@ -25,7 +29,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("TAMIL - should have new link and give 200 OK status", () => {
       //Navigate to Tamil Page
-      digitalSamplerPages.clickTamilPage();
+      openTamilPage();
 
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnYSSLessons
@@ -34,7 +38,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("TELUGU - should have new link and give 200 OK status", () => {
       //Navigate to Telugu Page
-      digitalSamplerPages.clickTeluguPage();
+      openTeluguPage();
 
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnYSSLessons
@@ -57,7 +61,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("HINDI - should have new link and give 200 OK status", () => {
       //Navigate to Hindi Page
-      digitalSamplerPages.clickHindiPage();
+      openHindiPage();
 
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btn6SpirituallyRevolutionaryIdeas
@@ -66,7 +70,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("TAMIL - should have new link and give 200 OK status", () => {
       //Navigate to Tamil Page
-      digitalSamplerPages.clickTamilPage();
+      openTamilPage();
 
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btn6SpirituallyRevolutionaryIdeas
@@ -75,7 +79,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("TELUGU - should have new link and give 200 OK status", () => {
       //Navigate to Telugu Page
-      digitalSamplerPages.clickTeluguPage();
+      openTeluguPage();
 
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btn6SpirituallyRevolutionaryIdeas
@@ -99,7 +103,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("HINDI - Tab2 >> A sampling of articles should have new link and give 200 OK status", () => {
       //Navigate to Hindi Page
-      digitalSamplerPages.clickHindiPage();
+      openHindiPage();
 
       //Select second Tab: A sampling of articles
       digitalSamplerPages.clickOnSecondTab();
@@ -111,7 +115,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("TAMIL - Tab2 >> A sampling of articles should have new link and give 200 OK status", () => {
       //Navigate to Tamil Page
-      digitalSamplerPages.clickTamilPage();
+      openTamilPage();
 
       //Select second Tab: A sampling of articles
       digitalSamplerPages.clickOnSecondTab();
@@ -123,7 +127,7 @@ describe("Flipbooks / Digital Samplers", () => {
 
     it("TELUGU - Tab2 >> A sampling of articles should have new link and give 200 OK status", () => {
       //Navigate to Telugu Page
-      digitalSamplerPages.clickTeluguPage();
+      openTeluguPage();
 
       //Select second Tab: A sampling of articles
       digitalSamplerPages.clickOnSecondTab();

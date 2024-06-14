@@ -2,27 +2,10 @@ export class ProductPreviewPages {
   oldLink = "https://yssofindia.org/wp-content/uploads/preview/";
   newLink = "https://wsfb.yssofindia.org/product-preview/";
 
-  //WPMLs
-  buttonHindi = ".wpml-ls-item-hi";
-  buttonTamil = ".wpml-ls-item-ta";
-  buttonTelugu = ".wpml-ls-item-te";
-
   //First Tab
   btnYSSMagazineTab1 =
     ".elementor-element-90984c6 > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-button-wrapper > .elementor-button";
   //First Tab
-
-  clickHindiPage() {
-    cy.get(this.buttonHindi).click();
-  }
-
-  clickTamilPage() {
-    cy.get(this.buttonTamil).click();
-  }
-
-  clickTeluguPage() {
-    cy.get(this.buttonTelugu).click();
-  }
 
   validateNewlinkAndStatusCode200(selector: string) {
     // cy.screenshot(`Page: ${Cypress.currentTest.titlePath[0]} >> ${Cypress.currentTest.titlePath[1]}`,{ overwrite: true, capture:"viewport" });

@@ -2,11 +2,6 @@ export class DigitalSamplerPages {
   oldLink = "https://yssofindia.org/digitalSamplers/";
   newLink = "https://wsfb.yssofindia.org/digitalsamplers/";
 
-  //WPMLs
-  buttonHindi = ".wpml-ls-item-hi";
-  buttonTamil = ".wpml-ls-item-ta";
-  buttonTelugu = ".wpml-ls-item-te";
-
   btn6SpirituallyRevolutionaryIdeas =
     ".elementor-element-ff6504f > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > :nth-child(3) > a";
   btnYSSLessons = ".elementor-button.elementor-button-link.elementor-size-sm";
@@ -16,18 +11,6 @@ export class DigitalSamplerPages {
   btnTab2ReadThisSample =
     ".elementor-element-e50625e > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-button-wrapper > .elementor-button";
   //Second Tab
-
-  clickHindiPage() {
-    cy.get(this.buttonHindi).click();
-  }
-
-  clickTamilPage() {
-    cy.get(this.buttonTamil).click();
-  }
-
-  clickTeluguPage() {
-    cy.get(this.buttonTelugu).click();
-  }
 
   validateNewlinkAndStatusCode200(selector: string) {
     // cy.screenshot(`Page: ${Cypress.currentTest.titlePath[0]} >> ${Cypress.currentTest.titlePath[1]}`,{ overwrite: true, capture:"viewport" });
