@@ -1,22 +1,29 @@
 export class DigitalSamplerPages {
+  oldLink = "https://yssofindia.org/digitalSamplers/";
+  newLink = "https://wsfb.yssofindia.org/digitalsamplers/";
 
-  oldLink = 'https://yssofindia.org/digitalSamplers/';
-  newLink = 'https://wsfb.yssofindia.org/digitalsamplers/'
+  btn6SpirituallyRevolutionaryIdeas =
+    ".elementor-element-ff6504f > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > :nth-child(3) > a";
+  btnYSSLessons = ".elementor-button.elementor-button-link.elementor-size-sm";
 
-  anchorIntroduction = ".elementor-element-ff6504f > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > :nth-child(3) > a";
-  
   //WPMLs
   buttonHindi = ".wpml-ls-item-hi";
   buttonTamil = ".wpml-ls-item-ta";
   buttonTelugu = ".wpml-ls-item-te";
 
-  checkHrefForNewLink(selector:string) { 
-    cy.get(selector)
-        .should("have.attr", "href")
-        .and("include", this.newLink);
+  validateNewlinkAndStatusCode200(selector: string) {
+    //Check if href contains new link
+    this.checkHrefForNewLink(selector);
+
+    //Check if new link is giving 200 OK response code
+    this.checkStatus200ForNewLink(selector);
   }
 
-  checkStatus200ForNewLink(selector:string) { 
+  checkHrefForNewLink(selector: string) {
+    cy.get(selector).should("have.attr", "href").and("include", this.newLink);
+  }
+
+  checkStatus200ForNewLink(selector: string) {
     cy.get(selector).then((link) => {
       cy.request("HEAD", link.prop("href")).its("status").should("eq", 200);
 
@@ -27,8 +34,8 @@ export class DigitalSamplerPages {
     });
   }
 
-  open3DIssueAndTakeScreenshot(link: JQuery<Element>) { 
-    cy.visit(link.prop('href')).wait(3000).screenshot({ overwrite: true });
+  open3DIssueAndTakeScreenshot(link: JQuery<Element>) {
+    cy.visit(link.prop("href")).wait(3000).screenshot({ overwrite: true });
   }
 
   clickHindiPage() {
