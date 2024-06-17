@@ -2,13 +2,13 @@
 import { TEST_CONFIG } from "../config";
 
 export function openHindiPage() {
-  cy.get(TEST_CONFIG.buttonHindi).click();
+  cy.get(TEST_CONFIG.buttonWPMLHindi).click();
 }
 
 export function openTamilPage() {
-  cy.get(TEST_CONFIG.buttonTamil).click();
+  cy.get(TEST_CONFIG.buttonWPMLTamil).click();
 }
 
 export function openTeluguPage() {
-  cy.get(TEST_CONFIG.buttonTelugu).click();
+  cy.get(TEST_CONFIG.buttonWPMLTelugu).click();
 }

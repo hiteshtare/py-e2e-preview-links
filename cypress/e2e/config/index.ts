@@ -1,8 +1,8 @@
 export const TEST_CONFIG = {
   //WPMLs
-  buttonHindi: ".wpml-ls-item-hi",
-  buttonTamil: ".wpml-ls-item-ta",
-  buttonTelugu: ".wpml-ls-item-te",
+  buttonWPMLHindi: ".wpml-ls-item-hi",
+  buttonWPMLTamil: ".wpml-ls-item-ta",
+  buttonWPMLTelugu: ".wpml-ls-item-te",
   //WPMLs
   digitalSampler: {
     //old - "https://yssofindia.org/digitalSamplers/"
