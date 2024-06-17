@@ -12,3 +12,7 @@ export function openTamilPage() {
 export function openTeluguPage() {
   cy.get(TEST_CONFIG.buttonWPMLTelugu).click();
 }
+
+export function captureSreenshot(seconds=0) {
+  cy.wait(seconds).screenshot({ capture: "viewport" });
+}

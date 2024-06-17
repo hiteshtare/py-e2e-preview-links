@@ -1,6 +1,9 @@
 // Import custom config
 import { TEST_CONFIG } from "../config";
 
+// Import custom modules
+import { captureSreenshot } from "../util/common.util";
+
 export class DigitalSamplerPages {
   btn6SpirituallyRevolutionaryIdeas =
     ".elementor-element-ff6504f > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > :nth-child(3) > a";
@@ -21,8 +24,7 @@ export class DigitalSamplerPages {
   //Second Tab
 
   validateNewlinkAndStatusCode200(selector: string) {
-    // cy.screenshot(`Page: ${Cypress.currentTest.titlePath[0]} >> ${Cypress.currentTest.titlePath[1]}`,{ overwrite: true, capture:"viewport" });
-    cy.screenshot({ capture: "viewport" });
+    captureSreenshot();
 
     //Check if href contains new link
     this.checkHrefForNewLink(selector);
@@ -32,8 +34,6 @@ export class DigitalSamplerPages {
   }
 
   validateNewlinkAndStatusCode200woScreenshot(selector: string) {
-    // cy.screenshot({capture:"viewport" });
-
     //Check if href contains new link
     this.checkHrefForNewLink(selector);
 
@@ -124,7 +124,7 @@ export class DigitalSamplerPages {
 
     cy.visit(link.prop("href"))
       .get(".a44")
-      .wait(TEST_CONFIG.digitalSampler.waitForScreenshot)
+      .wait(TEST_CONFIG.waitForScreenshot)
       .screenshot();
   }
 

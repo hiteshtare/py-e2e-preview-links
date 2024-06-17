@@ -3,17 +3,18 @@ export const TEST_CONFIG = {
   buttonWPMLHindi: ".wpml-ls-item-hi",
   buttonWPMLTamil: ".wpml-ls-item-ta",
   buttonWPMLTelugu: ".wpml-ls-item-te",
-  //WPMLs
+  //Global settings
+  captureScreenshotFor: 'viewport',
+  waitForScreenshot: 2000,
+  //Test suit wise
   digitalSampler: {
     //old - "https://yssofindia.org/digitalSamplers/"
     link: "https://wsfb.yssofindia.org/digitalsamplers/",
-    waitForScreenshot: 2000,
     skipOpen3DIssueAndTakeScreenshot: false,
   },
   productPreview: {
     //old - "https://yssofindia.org/wp-content/uploads/preview/"
     link: "https://wsfb.yssofindia.org/product-preview/" ,
-    waitForScreenshot: 2000,
     skipOpen3DIssueAndTakeScreenshot: false,
   },
   bookstorePreview: {
@@ -22,7 +23,6 @@ export const TEST_CONFIG = {
     buttonBengali: ":nth-child(1) > .value > .iconic-was-swatches > :nth-child(3) > .iconic-was-swatch",
     //old - "https://yssofindia.org/wp-content/uploads/preview/"
     link: "https://wsfb.yssofindia.org/product-preview/" ,
-    waitForScreenshot: 2000,
     skipOpenPDFAndTakeScreenshot: false,
   } 
 };

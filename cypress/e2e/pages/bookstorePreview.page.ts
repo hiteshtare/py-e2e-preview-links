@@ -1,6 +1,9 @@
 // Import custom config
 import { TEST_CONFIG } from "../config";
 
+// Import custom modules
+import { captureSreenshot } from "../util/common.util";
+
 export class BookstorePreviewPages {
   
   btnLookInside = 'body > div.elementor.elementor-183744.elementor-location-single.post-183040.product.type-product.status-publish.has-post-thumbnail.product_cat-magazine.product_shipping_class-free-shipping.pa_product-language-product-language-bengali.pa_product-language-product-language-english.pa_product-language-product-language-hindi.product-template-type-product-template-type-variable.first.instock.taxable.shipping-taxable.purchasable.product-type-variable.has-default-attributes.product > section.elementor-section.elementor-top-section.elementor-element.elementor-element-aaefea4.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div.elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-837ac8b > div > div.elementor-element.elementor-element-377c090.yss_noboxshadow.jedv-enabled--yes.elementor-widget.elementor-widget-text-editor > div > div > div > div > div > div > a';
@@ -18,8 +21,7 @@ export class BookstorePreviewPages {
   }
 
   validateNewlinkAndStatusCode200(selector: string) {
-    // cy.screenshot(`Page: ${Cypress.currentTest.titlePath[0]} >> ${Cypress.currentTest.titlePath[1]}`,{ overwrite: true, capture:"viewport" });
-    cy.screenshot({ capture: "viewport" });
+    captureSreenshot();
 
     //Check if href contains new link
     this.checkHrefForNewLink(selector);
@@ -29,7 +31,7 @@ export class BookstorePreviewPages {
   }
 
   validateNewlinkAndStatusCode200AfterClickScreenshot(selector: string) {
-    cy.wait(1000).screenshot({ capture: "viewport" });
+    captureSreenshot(1000);
 
     //Check if href contains new link
     this.checkHrefForNewLink(selector);
@@ -63,7 +65,7 @@ export class BookstorePreviewPages {
 
     cy.visit(link.prop("href"))
       .get(".a44")
-      .wait(TEST_CONFIG.bookstorePreview.waitForScreenshot)
+      .wait(TEST_CONFIG.waitForScreenshot)
       .screenshot();
   }
 }
