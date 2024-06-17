@@ -12,13 +12,13 @@ describe.skip("Magazines & Product Preview", () => {
       cy.visit("spiritual/yogoda-satsanga-magazine");
     });
 
-    it("Tab1 >> Yogoda Satsanga Magazine:Click to preview should have new link and give 200 OK status", () => {
+    it("Tab1 >> Yogoda Satsanga Magazine:Click to preview should have new Preview link and give 200 OK status", () => {
       productPreviewPages.validateNewlinkAndStatusCode200(
         productPreviewPages.btnYSSMagazineTab1
       );
     });
 
-    it("HINDI - Tab1 >> Yogoda Satsanga Magazine:Click to preview should have new link and give 200 OK status", () => {
+    it("HINDI - Tab1 >> Yogoda Satsanga Magazine:Click to preview should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
@@ -27,7 +27,7 @@ describe.skip("Magazines & Product Preview", () => {
       );
     });
 
-    it("TAMIL - Tab1 >> Yogoda Satsanga Magazine:Click to preview should have new link and give 200 OK status", () => {
+    it("TAMIL - Tab1 >> Yogoda Satsanga Magazine:Click to preview should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
@@ -36,7 +36,7 @@ describe.skip("Magazines & Product Preview", () => {
       );
     });
 
-    it("TELUGU - Tab1 >> Yogoda Satsanga Magazine:Click to preview should have new link and give 200 OK status", () => {
+    it("TELUGU - Tab1 >> Yogoda Satsanga Magazine:Click to preview should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 

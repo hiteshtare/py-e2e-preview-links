@@ -12,13 +12,13 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       cy.visit("yss-lessons");
     });
 
-    it("should have new link and give 200 OK status", () => {
+    it("should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnYSSLessons
       );
     });
 
-    it("HINDI - should have new link and give 200 OK status", () => {
+    it("HINDI - should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
@@ -27,7 +27,7 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TAMIL - should have new link and give 200 OK status", () => {
+    it("TAMIL - should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
@@ -36,7 +36,7 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TELUGU - should have new link and give 200 OK status", () => {
+    it("TELUGU - should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 
@@ -53,13 +53,13 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("should have new link and give 200 OK status", () => {
+    it("should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btn6SpirituallyRevolutionaryIdeas
       );
     });
 
-    it("HINDI - should have new link and give 200 OK status", () => {
+    it("HINDI - should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
@@ -68,7 +68,7 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TAMIL - should have new link and give 200 OK status", () => {
+    it("TAMIL - should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
@@ -77,7 +77,7 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TELUGU - should have new link and give 200 OK status", () => {
+    it("TELUGU - should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 
@@ -92,12 +92,12 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       cy.visit("spiritual/yogoda-satsanga-magazine");
     });
 
-    it("Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new link and give 200 OK status", () => {
+    it("Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
       //Select second Tab: A sampling of articles
       digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
     });
 
-    it("HINDI - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new link and give 200 OK status", () => {
+    it("HINDI - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
@@ -105,7 +105,7 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
     });
 
-    it("TAMIL - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new link and give 200 OK status", () => {
+    it("TAMIL - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
@@ -113,7 +113,7 @@ describe.skip("Flipbooks / Digital Samplers", () => {
       digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
     });
 
-    it("TELUGU - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new link and give 200 OK status", () => {
+    it("TELUGU - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 

@@ -13,13 +13,13 @@ describe("Bookstore", () => {
       cy.visit("product/yogoda-satsanga-magazine-subscription");
     });
 
-    it("Yogoda Satsanga Magazine Subscription should have new link and give 200 OK status", () => {
+    it("Yogoda Satsanga Magazine Subscription should have new Preview link and give 200 OK status", () => {
       bookstorePreviewPages.validateNewlinkAndStatusCode200ForBooks(
         bookstorePreviewPages.btnLookInside
       );
     });
 
-    it("HINDI - Yogoda Satsanga Magazine Subscription should have new link and give 200 OK status", () => {
+    it("HINDI - Yogoda Satsanga Magazine Subscription should have new Preview link and give 200 OK status", () => {
       //Select Hindi Language
       bookstorePreviewPages.clickHindiLanguage();
 
@@ -28,7 +28,7 @@ describe("Bookstore", () => {
       );
     });
 
-    it("BENGALI - Yogoda Satsanga Magazine Subscription should have new link and give 200 OK status", () => {
+    it("BENGALI - Yogoda Satsanga Magazine Subscription should have new Preview link and give 200 OK status", () => {
       //Select Hindi Language
       bookstorePreviewPages.clickBengaliLanguage();
 
@@ -48,7 +48,7 @@ describe("Bookstore", () => {
       //To check if match is true skip else open the page and run tests
       if (!isMatch) {
 
-        it(`Book with Title:${testCase.post_title} should have new link and give 200 OK status`, () => {
+        it(`Book with Title:${testCase.post_title} should have new Preview link and give 200 OK status`, () => {
           cy.visit(`product/${testCase.post_name}`);
 
           cy.log(`Book with Postname: ${testCase.post_name}`);
