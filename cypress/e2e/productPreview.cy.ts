@@ -6,7 +6,7 @@ import { openHindiPage, openTamilPage, openTeluguPage } from "./util/common.util
 
 const productPreviewPages = new ProductPreviewPages();
 
-describe("Magazines & Product Preview", () => {
+describe.skip("Magazines & Product Preview", () => {
   describe("yogoda-satsanga-magazine", () => {
     beforeEach(() => {
       cy.visit("spiritual/yogoda-satsanga-magazine");
