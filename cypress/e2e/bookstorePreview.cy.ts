@@ -9,7 +9,7 @@ const testDataForBooks = require("../fixtures/bookstore_book.json");
 const testDataForAudio = require("../fixtures/bookstore_audio.json");
 
 describe("Bookstore", () => {
-  describe.skip("magazine:Subscription", () => {
+  describe("magazine:Subscription", () => {
     beforeEach(() => {
       cy.visit("product/yogoda-satsanga-magazine-subscription");
     });
@@ -60,7 +60,7 @@ describe("Bookstore", () => {
     });
   });
 
-  describe.only("audio: Dynamic data test", () => {
+  describe("audio: Dynamic data test", () => {
     testDataForAudio.forEach((testCase: any, index: number) => {
       it(`#${index} Audio with Title:${testCase.post_title} should have new Preview link and give 200 OK status`, () => {
         cy.visit(`product/${testCase.post_name}`);
