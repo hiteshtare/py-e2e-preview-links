@@ -1,5 +1,5 @@
 // Import pages
-import { ProductPreviewPages } from "./pages/productPreview";
+import { ProductPreviewPages } from "./pages/productPreview.page";
 
 // Import custom modules
 import { openHindiPage, openTamilPage, openTeluguPage } from "./util/common.util";

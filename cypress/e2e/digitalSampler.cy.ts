@@ -1,5 +1,5 @@
 // Import pages
-import { DigitalSamplerPages } from "./pages/digitalSampler";
+import { DigitalSamplerPages } from "./pages/digitalSampler.page";
 
 // Import custom modules
 import { openHindiPage, openTamilPage, openTeluguPage } from "./util/common.util";

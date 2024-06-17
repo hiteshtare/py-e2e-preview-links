@@ -1,5 +1,5 @@
 // Import pages
-import { BookstorePreviewPages } from "./pages/bookstorePreview";
+import { BookstorePreviewPages } from "./pages/bookstorePreview.page";
 
 // Import custom modules
 const bookstorePreviewPages = new BookstorePreviewPages();
