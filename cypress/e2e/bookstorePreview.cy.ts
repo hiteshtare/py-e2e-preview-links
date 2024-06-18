@@ -99,6 +99,19 @@ describe("Bookstore", () => {
     });
   });
 
+
+  describe("product: Paramahansa Yogananda Commemorative Coin", () => {
+    beforeEach(() => {
+      cy.visit("product/paramahansa-yogananda-commemorative-coin");
+    });
+
+    it("Paramahansa Yogananda Commemorative Coin should have new Preview link and give 200 OK status", () => {
+      bookstorePreviewPages.validateNewlinkAndStatusCode200ForBooks(
+        bookstorePreviewPages.btnVideoEmbedHover
+      );
+    });
+  });
+
   describe("books: Dynamic data test", () => {
     testDataForBooks.forEach((testCase: any, index: number) => {
       let pattern = /-\d+$/;

@@ -173,6 +173,47 @@ describe("Flipbooks / Digital Samplers", () => {
     });
   });
 
+  describe.skip("blog/special-commemorative-coin-now-available", () => {
+    beforeEach(() => {
+      cy.visit(
+        "blog/special-commemorative-coin-now-available"
+      );
+    });
+
+    it("should have new Preview link and give 200 OK status", () => {
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnVideoEmbedHover
+      );
+    });
+
+    it("HINDI - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Hindi Page
+      openHindiPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnVideoEmbedHover
+      );
+    });
+
+    it("TAMIL - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Tamil Page
+      openTamilPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnVideoEmbedHover
+      );
+    });
+
+    it("TELUGU - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Telugu Page
+      openTeluguPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnVideoEmbedHover
+      );
+    });
+  });
+
   describe("blog/thank-you-for-your-love-support-and-prayers", () => {
     beforeEach(() => {
       cy.visit(

@@ -15,6 +15,9 @@ export class DigitalSamplerPages {
   btnReadCompleteAppeal = 'body > div.elementor.elementor-23294.elementor-location-single.post-7481.blog.type-blog.status-publish.has-post-thumbnail.hentry.blog-category-news > section.elementor-section.elementor-top-section.elementor-element.elementor-element-bd67779.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div > div > div > div > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-aaee4ce.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div > div > div > div > div > a';
   btnProductCatalogueColumn = ':nth-child(1) > :nth-child(4) > .td-content-wrapper > .td-content > p > a';
 
+  //Commemorative Coin
+  btnVideoEmbedHover = 'a[href$="commemorative-coin/index.html"]';
+  
   //Second Tab
   btnSecondTab = "#samplearticles";
   btnTab2ReadThisSample =
