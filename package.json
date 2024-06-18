@@ -9,7 +9,11 @@
     "pretest": "npm run allure:clear",
     "test": "npm run cypress-test || npm run posttest",
     "cypress-test": "cypress run --env allure=true",
-    "posttest": "npm run allure:report"
+    "posttest": "npm run allure:report",
+    "pretest:release": "npm run allure:clear",
+    "test:release": "npm run cypress-test:release || npm run posttest:release",
+    "cypress-test:release": "CYPRESS_BASE_URL=https://yssofindia.org cypress run",
+    "posttest:release": "npm run allure:report"
   },
   "keywords": [],
   "author": "Hitesh Tare",
