@@ -46,6 +46,92 @@ describe("Flipbooks / Digital Samplers", () => {
     });
   });
 
+  describe("yogoda-satsanga-magazine: Tab2", () => {
+    beforeEach(() => {
+      cy.visit("spiritual/yogoda-satsanga-magazine");
+    });
+
+    it("Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
+      //Select second Tab: A sampling of articles
+      digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
+    });
+
+    it("HINDI - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
+      //Navigate to Hindi Page
+      openHindiPage();
+
+      //Select second Tab: A sampling of articles
+      digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
+    });
+
+    it("TAMIL - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
+      //Navigate to Tamil Page
+      openTamilPage();
+
+      //Select second Tab: A sampling of articles
+      digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
+    });
+
+    it("TELUGU - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
+      //Navigate to Telugu Page
+      openTeluguPage();
+
+      //Select second Tab: A sampling of articles
+      digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
+    });
+  });
+
+  describe("voice-of-paramahansa-yogananda-free-download", () => {
+    beforeEach(() => {
+      cy.visit("voice-of-paramahansa-yogananda-free-download");
+    });
+
+    it("should have new Preview link and give 200 OK status", () => {
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnReadIntroductoryLesson
+      );
+    });
+  });
+
+  describe("about/request-free-literature", () => {
+    beforeEach(() => {
+      cy.visit("about/request-free-literature");
+    });
+
+    it("Product Catalogue column should have new Preview link and give 200 OK status", () => {
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnProductCatalogueColumn
+      );
+    });
+
+    it("HINDI - Product Catalogue column should have new Preview link and give 200 OK status", () => {
+      //Navigate to Hindi Page
+      openHindiPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnProductCatalogueColumn
+      );
+    });
+
+    it("TAMIL - Product Catalogue column should have new Preview link and give 200 OK status", () => {
+      //Navigate to Tamil Page
+      openTamilPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnProductCatalogueColumn
+      );
+    });
+
+    it("TELUGU - Product Catalogue column should have new Preview link and give 200 OK status", () => {
+      //Navigate to Telugu Page
+      openTeluguPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnProductCatalogueColumn
+      );
+    });
+  });
+
   describe("blog/6-spiritually-revolutionary-ideas", () => {
     beforeEach(() => {
       cy.visit(
@@ -87,38 +173,112 @@ describe("Flipbooks / Digital Samplers", () => {
     });
   });
 
-  describe("yogoda-satsanga-magazine: Tab2", () => {
+  describe("blog/thank-you-for-your-love-support-and-prayers", () => {
     beforeEach(() => {
-      cy.visit("spiritual/yogoda-satsanga-magazine");
+      cy.visit(
+        "blog/thank-you-for-your-love-support-and-prayers"
+      );
     });
 
-    it("Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
-      //Select second Tab: A sampling of articles
-      digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
+    it("should have new Preview link and give 200 OK status", () => {
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnThankYouForYourLove
+      );
     });
 
-    it("HINDI - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
+    it("HINDI - should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
-      //Select second Tab: A sampling of articles
-      digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnThankYouForYourLove
+      );
     });
 
-    it("TAMIL - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
+    it("TAMIL - should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
-      //Select second Tab: A sampling of articles
-      digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnThankYouForYourLove
+      );
     });
 
-    it("TELUGU - Tab2 >> A sampling of articles:Read this sample and other 6 Magazine links should have new Preview link and give 200 OK status", () => {
+    it("TELUGU - should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 
-      //Select second Tab: A sampling of articles
-      digitalSamplerPages.clickSecondTabAndValidateAllMagazineNewLinksAndStatusCode200woScreenshot();
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnThankYouForYourLove
+      );
     });
   });
+
+  describe("blog/jan-mar-2020-issue-of-yogoda-satsanga-magazine-available-in-free-digital-format", () => {
+    beforeEach(() => {
+      cy.visit(
+        "blog/jan-mar-2020-issue-of-yogoda-satsanga-magazine-available-in-free-digital-format"
+      );
+    });
+
+    it("should have new Preview link and give 200 OK status", () => {
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnThankYouForYourLove
+      );
+    });
+  });
+
+  describe("blog/newsletter-and-appeal-for-the-new-edition-of-yogoda-satsanga-lessons", () => {
+    beforeEach(() => {
+      cy.visit("blog/newsletter-and-appeal-for-the-new-edition-of-yogoda-satsanga-lessons");
+    });
+
+    it("should have new Preview link and give 200 OK status", () => {
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnReadCompleteAppeal
+      );
+    });
+  });
+
+  describe("meditation/what-is-yoga-meditation", () => {
+    beforeEach(() => {
+      cy.visit(
+        "meditation/what-is-yoga-meditation"
+      );
+    });
+
+    it("should have new Preview link and give 200 OK status", () => {
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnReadNow
+      );
+    });
+
+    it("HINDI - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Hindi Page
+      openHindiPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnReadNow
+      );
+    });
+
+    it("TAMIL - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Tamil Page
+      openTamilPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnReadNow
+      );
+    });
+
+    it("TELUGU - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Telugu Page
+      openTeluguPage();
+
+      digitalSamplerPages.validateNewlinkAndStatusCode200(
+        digitalSamplerPages.btnReadNow
+      );
+    });
+  });
+
 });

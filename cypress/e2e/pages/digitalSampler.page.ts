@@ -8,6 +8,12 @@ export class DigitalSamplerPages {
   btn6SpirituallyRevolutionaryIdeas =
     ".elementor-element-ff6504f > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > :nth-child(3) > a";
   btnYSSLessons = ".elementor-button.elementor-button-link.elementor-size-sm";
+  btnThankYouForYourLove = 'a[href$="amplers/ysm-i-2020/index.html"]';
+  btnReadNow = '.elementor-element-5915a4c > .elementor-widget-container > .elementor-button-wrapper > .elementor-button';
+  btnReadTheJanMar2020issue = 'a[href$="amplers/ysm-i-2020/index.html"]';
+  btnReadIntroductoryLesson = 'body > div.elementor.elementor-24684.elementor-location-single.post-126957.page.type-page.status-publish.hentry > section.elementor-section.elementor-top-section.elementor-element.elementor-element-41b2eb9.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div > div > div > div > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-7dff14f.elementor-section-content-middle.elementor-reverse-tablet.elementor-reverse-mobile.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div.elementor-column.elementor-col-50.elementor-top-column.elementor-element.elementor-element-5a21e37 > div > div.elementor-element.elementor-element-8a34d5e.elementor-widget.elementor-widget-text-editor > div > p:nth-child(2) > a';
+  btnReadCompleteAppeal = 'body > div.elementor.elementor-23294.elementor-location-single.post-7481.blog.type-blog.status-publish.has-post-thumbnail.hentry.blog-category-news > section.elementor-section.elementor-top-section.elementor-element.elementor-element-bd67779.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div > div > div > div > div > section.elementor-section.elementor-top-section.elementor-element.elementor-element-aaee4ce.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default > div > div > div > div > div > div > a';
+  btnProductCatalogueColumn = '#eael-data-table-284ab74 > tbody > tr:nth-child(1) > td:nth-child(4) > div > div.td-content > p > a';
 
   //Second Tab
   btnSecondTab = "#samplearticles";
