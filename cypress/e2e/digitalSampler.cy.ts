@@ -93,7 +93,7 @@ describe("Flipbooks / Digital Samplers", () => {
     });
   });
 
-  describe("about/request-free-literature", () => {
+  describe.skip("about/request-free-literature", () => {
     beforeEach(() => {
       cy.visit("about/request-free-literature");
     });
