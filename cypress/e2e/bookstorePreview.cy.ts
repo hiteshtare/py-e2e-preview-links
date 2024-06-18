@@ -47,10 +47,10 @@ describe("Bookstore", () => {
 
       //To check if match is true skip else open the page and run tests
       if (!isMatch) {
-        it(`#${index} Book with Title:${testCase.post_title} should have new Preview link and give 200 OK status`, () => {
+        it(`Book with Title:${testCase.post_title} should have new Preview link and give 200 OK status`, () => {
           cy.visit(`product/${testCase.post_name}`);
 
-          cy.log(`#${index} Book with postname: ${testCase.post_name}`);
+          cy.log(`#${index+1} Book with postname: ${testCase.post_name}`);
 
           bookstorePreviewPages.validateNewlinkAndStatusCode200ForBooks(
             bookstorePreviewPages.btnLookInsideForBooks
@@ -62,10 +62,10 @@ describe("Bookstore", () => {
 
   describe("audio: Dynamic data test", () => {
     testDataForAudio.forEach((testCase: any, index: number) => {
-      it(`#${index} Audio with Title:${testCase.post_title} should have new Preview link and give 200 OK status`, () => {
+      it(`Audio with Title:${testCase.post_title} should have new Preview link and give 200 OK status`, () => {
         cy.visit(`product/${testCase.post_name}`);
 
-        cy.log(`#${index} Audio with postname: ${testCase.post_name}`);
+        cy.log(`#${index+1} Audio with postname: ${testCase.post_name}`);
 
         bookstorePreviewPages.validateNewlinkAndStatusCode200ForAudio(
           bookstorePreviewPages.btnForAudioPreview
