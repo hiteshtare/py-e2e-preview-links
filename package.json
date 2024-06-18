@@ -12,7 +12,7 @@
     "posttest": "npm run allure:report",
     "pretest:release": "npm run allure:clear",
     "test:release": "npm run cypress-test:release || npm run posttest:release",
-    "cypress-test:release": "CYPRESS_BASE_URL=https://yssofindia.org cypress run",
+    "cypress-test:release": "CYPRESS_BASE_URL=https://yssofindia.org cypress run --env allure=true",
     "posttest:release": "npm run allure:report"
   },
   "keywords": [],
