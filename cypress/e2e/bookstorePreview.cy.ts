@@ -16,7 +16,7 @@ describe("Bookstore", () => {
 
     it("Yogoda Satsanga Magazine Subscription should have new Preview link and give 200 OK status", () => {
       bookstorePreviewPages.validateNewlinkAndStatusCode200ForBooks(
-        bookstorePreviewPages.btnLookInside
+        bookstorePreviewPages.btnLookInsideSubscription
       );
     });
 
@@ -25,7 +25,7 @@ describe("Bookstore", () => {
       bookstorePreviewPages.clickHindiLanguage();
 
       bookstorePreviewPages.validateNewlinkAndStatusCode200AfterClickScreenshot(
-        bookstorePreviewPages.btnLookInside
+        bookstorePreviewPages.btnLookInsideSubscription
       );
     });
 
@@ -34,7 +34,67 @@ describe("Bookstore", () => {
       bookstorePreviewPages.clickBengaliLanguage();
 
       bookstorePreviewPages.validateNewlinkAndStatusCode200AfterClickScreenshot(
-        bookstorePreviewPages.btnLookInside
+        bookstorePreviewPages.btnLookInsideSubscription
+      );
+    });
+  });
+
+  describe("magazine: Yogoda Satsanga Magazine 2023 Annual Issue", () => {
+    beforeEach(() => {
+      cy.visit("product/yogoda-satsanga-magazine-2023-annual-issue");
+    });
+
+    it("Yogoda Satsanga Magazine 2023 Annual Issue should have new Preview link and give 200 OK status", () => {
+      bookstorePreviewPages.validateNewlinkAndStatusCode200ForBooks(
+        bookstorePreviewPages.btnLookInsideIndividualIssue
+      );
+    });
+
+    it("HINDI - Yogoda Satsanga Magazine 2023 Annual Issue should have new Preview link and give 200 OK status", () => {
+      //Select Hindi Language
+      bookstorePreviewPages.clickHindiLanguage();
+
+      bookstorePreviewPages.validateNewlinkAndStatusCode200AfterClickScreenshot(
+        bookstorePreviewPages.btnLookInsideIndividualIssue
+      );
+    });
+
+    it("BENGALI - Yogoda Satsanga Magazine 2023 Annual Issue should have new Preview link and give 200 OK status", () => {
+      //Select Hindi Language
+      bookstorePreviewPages.clickBengaliLanguage();
+
+      bookstorePreviewPages.validateNewlinkAndStatusCode200AfterClickScreenshot(
+        bookstorePreviewPages.btnLookInsideIndividualIssue
+      );
+    });
+  });
+
+  describe("magazine: Yogoda Satsanga Magazine 2022 Annual Issue", () => {
+    beforeEach(() => {
+      cy.visit("product/yogoda-satsanga-magazine-2022-annual-issue");
+    });
+
+    it("Yogoda Satsanga Magazine 2022 Annual Issue should have new Preview link and give 200 OK status", () => {
+      bookstorePreviewPages.validateNewlinkAndStatusCode200ForBooks(
+        bookstorePreviewPages.btnLookInsideIndividualIssue
+      );
+    });
+
+    it("HINDI - Yogoda Satsanga Magazine 2022 Annual Issue should have new Preview link and give 200 OK status", () => {
+      //Select Hindi Language
+      bookstorePreviewPages.clickHindiLanguage();
+
+      bookstorePreviewPages.validateNewlinkAndStatusCode200AfterClickScreenshot(
+        bookstorePreviewPages.btnLookInsideIndividualIssue
+      );
+    });
+
+    it("BENGALI - Yogoda Satsanga Magazine 2022 Annual Issue should have new Preview link and give 200 OK status", () => {
+      //Select Hindi Language
+      bookstorePreviewPages.clickBengaliLanguage();
+
+      bookstorePreviewPages.validateNewlinkAndStatusCode200AfterClickScreenshot(
+        bookstorePreviewPages.btnLookInsideIndividualIssue
       );
     });
   });
