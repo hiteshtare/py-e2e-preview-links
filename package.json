@@ -8,11 +8,11 @@
     "allure:clear": "rm -r allure-results/** && rm -r allure-report/**",
     "pretest": "npm run allure:clear",
     "test": "npm run cypress-test || npm run posttest",
-    "cypress-test": "cypress run --env allure=true",
+    "cypress-test": "cypress run --env environmentName=staging,allure=true",
     "posttest": "npm run allure:report",
     "pretest:release": "npm run allure:clear",
     "test:release": "npm run cypress-test:release || npm run posttest:release",
-    "cypress-test:release": "CYPRESS_BASE_URL=https://yssofindia.org cypress run --env allure=true",
+    "cypress-test:release": "cypress run --env environmentName=release,allure=true",
     "posttest:release": "npm run allure:report"
   },
   "keywords": [],
