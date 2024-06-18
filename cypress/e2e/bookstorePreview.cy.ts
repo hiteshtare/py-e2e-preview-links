@@ -9,7 +9,7 @@ const testDataForBooks = require("../fixtures/bookstore_book.json");
 const testDataForAudio = require("../fixtures/bookstore_audio.json");
 
 describe("Bookstore", () => {
-  describe("magazine:Subscription", () => {
+  describe("magazine: Subscription", () => {
     beforeEach(() => {
       cy.visit("product/yogoda-satsanga-magazine-subscription");
     });
