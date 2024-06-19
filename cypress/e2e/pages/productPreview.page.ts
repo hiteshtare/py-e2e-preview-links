@@ -9,6 +9,9 @@ export class ProductPreviewPages {
     ".elementor-element-90984c6 > .elementor-container > .elementor-column > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-button-wrapper > .elementor-button";
   //First Tab
 
+  //Commemorative Coin
+  btnVideoEmbedHover = 'a[href$="commemorative-coin/index.html"]';
+  
   validateNewlinkAndStatusCode200(selector: string) {
     captureSreenshot();
 

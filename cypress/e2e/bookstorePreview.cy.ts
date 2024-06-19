@@ -99,7 +99,6 @@ describe("Bookstore", () => {
     });
   });
 
-
   describe("product: Paramahansa Yogananda Commemorative Coin", () => {
     beforeEach(() => {
       cy.visit("product/paramahansa-yogananda-commemorative-coin");

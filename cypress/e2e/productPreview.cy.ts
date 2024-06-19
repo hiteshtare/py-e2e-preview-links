@@ -45,4 +45,45 @@ describe("Magazines & Product Preview", () => {
       );
     });
   });
+
+  describe("blog/special-commemorative-coin-now-available", () => {
+    beforeEach(() => {
+      cy.visit(
+        "blog/special-commemorative-coin-now-available"
+      );
+    });
+
+    it("should have new Preview link and give 200 OK status", () => {
+      productPreviewPages.validateNewlinkAndStatusCode200(
+        productPreviewPages.btnVideoEmbedHover
+      );
+    });
+
+    it("HINDI - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Hindi Page
+      openHindiPage();
+
+      productPreviewPages.validateNewlinkAndStatusCode200(
+        productPreviewPages.btnVideoEmbedHover
+      );
+    });
+
+    it("TAMIL - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Tamil Page
+      openTamilPage();
+
+      productPreviewPages.validateNewlinkAndStatusCode200(
+        productPreviewPages.btnVideoEmbedHover
+      );
+    });
+
+    it("TELUGU - should have new Preview link and give 200 OK status", () => {
+      //Navigate to Telugu Page
+      openTeluguPage();
+
+      productPreviewPages.validateNewlinkAndStatusCode200(
+        productPreviewPages.btnVideoEmbedHover
+      );
+    });
+  });
 });
