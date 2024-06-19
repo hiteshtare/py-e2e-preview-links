@@ -93,7 +93,7 @@ describe("Flipbooks / Digital Samplers", () => {
     });
   });
 
-  describe.skip("about/request-free-literature", () => {
+  describe("about/request-free-literature", () => {
     beforeEach(() => {
       cy.visit("about/request-free-literature");
     });
@@ -173,7 +173,7 @@ describe("Flipbooks / Digital Samplers", () => {
     });
   });
 
-  describe.skip("blog/special-commemorative-coin-now-available", () => {
+  describe.only("blog/special-commemorative-coin-now-available", () => {
     beforeEach(() => {
       cy.visit(
         "blog/special-commemorative-coin-now-available"
