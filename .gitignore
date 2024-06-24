@@ -32,3 +32,6 @@ js/*.js
 # Allure
 allure-report
 allure-results
+
+# Mochawesome
+cypress/reports
