@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "allure:report": "allure generate allure-results --clean -o allure-reports",
-    "allure:clear": "rm -r allure-results/** && rm -r allure-reports/**",
+    "allure:clear": "rm -r allure-results/** && cp -r allure-reports/history/ allure-results && rm -r allure-reports/**",
     "pretest": "npm run allure:clear",
     "test": "npm run cypress-test || npm run posttest",
     "cypress-test": "cypress run --env environmentName=staging,allure=true",
