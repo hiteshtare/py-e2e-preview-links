@@ -12,13 +12,13 @@ describe("Flipbooks / Digital Samplers", () => {
       cy.visit("yss-lessons");
     });
 
-    it("should have new Preview link and give 200 OK status", () => {
+    it("btnYSSLessons should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnYSSLessons
       );
     });
 
-    it("HINDI - should have new Preview link and give 200 OK status", () => {
+    it("HINDI - btnYSSLessons should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
@@ -27,7 +27,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TAMIL - should have new Preview link and give 200 OK status", () => {
+    it("TAMIL - btnYSSLessons should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
@@ -36,7 +36,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TELUGU - should have new Preview link and give 200 OK status", () => {
+    it("TELUGU - btnYSSLessons should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 
@@ -86,7 +86,7 @@ describe("Flipbooks / Digital Samplers", () => {
       cy.visit("voice-of-paramahansa-yogananda-free-download");
     });
 
-    it("should have new Preview link and give 200 OK status", () => {
+    it("btnReadIntroductoryLesson should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnReadIntroductoryLesson
       );
@@ -139,13 +139,13 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("should have new Preview link and give 200 OK status", () => {
+    it("btn6SpirituallyRevolutionaryIdeas should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btn6SpirituallyRevolutionaryIdeas
       );
     });
 
-    it("HINDI - should have new Preview link and give 200 OK status", () => {
+    it("HINDI - btn6SpirituallyRevolutionaryIdeas should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
@@ -154,7 +154,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TAMIL - should have new Preview link and give 200 OK status", () => {
+    it("TAMIL - btn6SpirituallyRevolutionaryIdeas should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
@@ -163,7 +163,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TELUGU - should have new Preview link and give 200 OK status", () => {
+    it("TELUGU - btn6SpirituallyRevolutionaryIdeas should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 
@@ -180,13 +180,13 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("should have new Preview link and give 200 OK status", () => {
+    it("ENGLISH - btnThankYouForYourLove should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnThankYouForYourLove
       );
     });
 
-    it("HINDI - should have new Preview link and give 200 OK status", () => {
+    it("HINDI - btnThankYouForYourLove should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
@@ -195,7 +195,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TAMIL - should have new Preview link and give 200 OK status", () => {
+    it("TAMIL - btnThankYouForYourLove should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
@@ -204,7 +204,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TELUGU - should have new Preview link and give 200 OK status", () => {
+    it("TELUGU - btnThankYouForYourLove should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 
@@ -221,7 +221,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("should have new Preview link and give 200 OK status", () => {
+    it("btnThankYouForYourLove should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnThankYouForYourLove
       );
@@ -233,7 +233,7 @@ describe("Flipbooks / Digital Samplers", () => {
       cy.visit("blog/newsletter-and-appeal-for-the-new-edition-of-yogoda-satsanga-lessons");
     });
 
-    it("should have new Preview link and give 200 OK status", () => {
+    it("btnReadCompleteAppeal should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnReadCompleteAppeal
       );
@@ -247,13 +247,13 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("should have new Preview link and give 200 OK status", () => {
+    it("btnReadNow should have new Preview link and give 200 OK status", () => {
       digitalSamplerPages.validateNewlinkAndStatusCode200(
         digitalSamplerPages.btnReadNow
       );
     });
 
-    it("HINDI - should have new Preview link and give 200 OK status", () => {
+    it("HINDI - btnReadNow should have new Preview link and give 200 OK status", () => {
       //Navigate to Hindi Page
       openHindiPage();
 
@@ -262,7 +262,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TAMIL - should have new Preview link and give 200 OK status", () => {
+    it("TAMIL - btnReadNow should have new Preview link and give 200 OK status", () => {
       //Navigate to Tamil Page
       openTamilPage();
 
@@ -271,7 +271,7 @@ describe("Flipbooks / Digital Samplers", () => {
       );
     });
 
-    it("TELUGU - should have new Preview link and give 200 OK status", () => {
+    it("TELUGU - btnReadNow should have new Preview link and give 200 OK status", () => {
       //Navigate to Telugu Page
       openTeluguPage();
 
