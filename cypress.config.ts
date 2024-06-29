@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 import allureWriter from '@shelex/cypress-allure-plugin/writer';
 import fs from 'fs';
+const { beforeRunHook } = require('cypress-mochawesome-reporter/lib');
 
 export default defineConfig({
   e2e: {
@@ -41,6 +42,9 @@ export default defineConfig({
       // IMPORTANT: return the updated config object
       // for Cypress to use it
       allureWriter(on, config);
+      on('before:run', async (details) => {
+        await beforeRunHook(details);
+      });
       on('after:run', (results) => {
         const data = `Environment=${environmentName}\nBaseURL=${settings.baseUrl}\n`
         fs.writeFile('allure-results/environment.properties', data, (err) => {

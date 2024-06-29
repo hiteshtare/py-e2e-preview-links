@@ -35,3 +35,8 @@ allure-results
 
 # Mochawesome
 cypress/reports
+
+# Cypress-Parallel
+cypress/parallel-weights.json
+runner-results/
+multi-reporter-config.json
