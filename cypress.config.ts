@@ -14,13 +14,13 @@ export default defineConfig({
     viewportWidth: 1280,
     viewportHeight: 768,
     baseUrl: 'https://test.yssofindia.org/',
-    reporter: 'cypress-mochawesome-reporter',
-    reporterOptions: {
-      charts: true,
-      reportPageTitle: 'PY - Mochawesome Test Reports',
-      embeddedScreenshots: true,
-      inlineAssets: true,
-    },
+    // reporter: 'cypress-mochawesome-reporter',
+    // reporterOptions: {
+    //   charts: true,
+    //   reportPageTitle: 'PY - Mochawesome Test Reports',
+    //   embeddedScreenshots: true,
+    //   inlineAssets: true,
+    // },
     setupNodeEvents(on, config) {
       // implement node event listeners here
       const environmentName = config.env.environmentName || 'staging';
@@ -47,7 +47,7 @@ export default defineConfig({
           if (err) throw err;
         });
       })
-      require('cypress-mochawesome-reporter/plugin')(on);
+      // require('cypress-mochawesome-reporter/plugin')(on);
       return config;
     },
   },
