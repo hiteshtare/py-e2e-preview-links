@@ -1,5 +1,6 @@
 // Import pages
 import { BookstorePreviewPages } from "./pages/bookstorePreview.page";
+import { captureSreenshot } from "./util/common.util";
 
 // Import custom modules
 const bookstorePreviewPages = new BookstorePreviewPages();
@@ -119,10 +120,12 @@ describe.only("Bookstore", () => {
 
       //To check if match is true skip else open the page and run tests
       if (!isMatch) {
-        it(`#${index+1} Book with Title:${testCase.post_title} should have new Preview link and give 200 OK status`, () => {
+        it(`#${index + 1} Book with Title:${
+          testCase.post_title
+        } should have new Preview link and give 200 OK status`, () => {
           cy.visit(`product/${testCase.post_name}`);
 
-          cy.log(`#${index+1} Book with postname: ${testCase.post_name}`);
+          cy.log(`#${index + 1} Book with postname: ${testCase.post_name}`);
 
           bookstorePreviewPages.validateNewlinkAndStatusCode200ForBooks(
             bookstorePreviewPages.btnLookInsideForBooks
@@ -140,11 +143,13 @@ describe.only("Bookstore", () => {
 
       //To check if match is true skip else open the page and run tests
       if (!isMatch) {
-
         it(`#${index + 1} Book with Title:${
           testCase.post_title
         } should have Language section before Format`, () => {
           cy.log(`#${index + 1} Book with postname: ${testCase.post_name}`);
+
+          cy.visit(`product/${testCase.post_name}`);
+          captureSreenshot(1000);
 
           cy.request({
             url: `product/${testCase.post_name}`,
@@ -166,10 +171,12 @@ describe.only("Bookstore", () => {
 
   describe("audio: Dynamic data test", () => {
     testDataForAudio.forEach((testCase: any, index: number) => {
-      it(`#${index+1} Audio with Title:${testCase.post_title} should have new Preview link and give 200 OK status`, () => {
+      it(`#${index + 1} Audio with Title:${
+        testCase.post_title
+      } should have new Preview link and give 200 OK status`, () => {
         cy.visit(`product/${testCase.post_name}`);
 
-        cy.log(`#${index+1} Audio with postname: ${testCase.post_name}`);
+        cy.log(`#${index + 1} Audio with postname: ${testCase.post_name}`);
 
         bookstorePreviewPages.validateNewlinkAndStatusCode200ForAudio(
           bookstorePreviewPages.btnForAudioPreview
