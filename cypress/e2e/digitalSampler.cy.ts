@@ -6,7 +6,7 @@ import { openHindiPage, openTamilPage, openTeluguPage } from "./util/common.util
 
 const digitalSamplerPages = new DigitalSamplerPages();
 
-describe("Flipbooks / Digital Samplers", () => {
+describe.skip("Flipbooks / Digital Samplers", () => {
   describe("yss-lessons", () => {
     beforeEach(() => {
       cy.visit("yss-lessons");

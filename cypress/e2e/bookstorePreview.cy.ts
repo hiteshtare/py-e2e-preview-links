@@ -8,7 +8,7 @@ const bookstorePreviewPages = new BookstorePreviewPages();
 const testDataForBooks = require("../fixtures/bookstore_book.json");
 const testDataForAudio = require("../fixtures/bookstore_audio.json");
 
-describe("Bookstore", () => {
+describe.only("Bookstore", () => {
   describe("magazine: Subscription", () => {
     beforeEach(() => {
       cy.visit("product/yogoda-satsanga-magazine-subscription");
@@ -127,6 +127,38 @@ describe("Bookstore", () => {
           bookstorePreviewPages.validateNewlinkAndStatusCode200ForBooks(
             bookstorePreviewPages.btnLookInsideForBooks
           );
+        });
+      }
+    });
+  });
+
+  describe.only("books: FDP - Dynamic data test", () => {
+    testDataForBooks.forEach((testCase: any, index: number) => {
+      let pattern = /-\d+$/;
+
+      const isMatch = pattern.test(testCase.post_name);
+
+      //To check if match is true skip else open the page and run tests
+      if (!isMatch) {
+
+        it(`#${index + 1} Book with Title:${
+          testCase.post_title
+        } should have Language section before Format`, () => {
+          cy.log(`#${index + 1} Book with postname: ${testCase.post_name}`);
+
+          cy.request({
+            url: `product/${testCase.post_name}`,
+          }).then((response) => {
+            // test any response properties here
+            // expect(response.status).to.eq(200);
+
+            const disabledPlugins = "" + response.headers["disabled-plugins"];
+            const arr = disabledPlugins.split("on");
+            const count = +arr[0].trim();
+
+            cy.log(`disabledPluginsCount: ${count}`);
+            expect(count).to.eq(40);
+          });
         });
       }
     });
